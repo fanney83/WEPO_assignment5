@@ -1,6 +1,5 @@
 import React from 'react';
 import css from './NameCard.css';
-import PropTypes from 'prop-types';
 
 const NameCard = ({ name, email, telephone, imageUrl }) => {
     return (
@@ -13,13 +12,6 @@ const NameCard = ({ name, email, telephone, imageUrl }) => {
             </div>
         </div>
     );
-};
-
-NameCard.propTypes = {
-    name: PropTypes.name,
-    email: PropTypes.email,
-    telephone: PropTypes.telephone,
-    imageUrl: PropTypes.string.isRequired
 };
 
 export default NameCard;

@@ -3,6 +3,7 @@ import './App.css';
 import  Modal  from './components/Modal/Modal';
 //import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
+import Carousel from './components/Carousel/Carousel';
 class App extends Component {
     constructor(props) {
         super(props)
@@ -31,6 +32,14 @@ class App extends Component {
                 email="fanneyv12@ru.is"
                 telephone="+354-866-5544"
                 imageUrl="https://images7.alphacoders.com/633/thumb-350-633262.png"/>
+            <Carousel
+                images={[
+                    'https://cdn.igromania.ru/mnt/news/9/3/4/c/d/e/68108/d05bf2a226c87c24_848x477.jpg',
+                    'https://static.spin.com/files/2018/03/Screen-Shot-2018-03-16-at-10.49.09-AM-1521211786-640x374.png',
+                    'http://cdn1-www.comingsoon.net/assets/uploads/2017/12/Screen-Shot-2017-12-14-at-5.13.15-PM-e1513300425439.jpg'
+                ]}
+                size="medium" />
+
       </div>
 
     );
