@@ -1,0 +1,68 @@
+
+
+
+.percentcount {
+    width: 506px;
+    height: 50px;
+    margin: 100px, auto;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+
+}
+
+.progressbar {
+    
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin: 50px, auto;
+    padding: 3px;
+    border-radius: 13px;
+    height: 26px;
+    width: 506px;  
+    transition: 1s;
+}
+
+.progress{
+    /*width: 50%;*/
+    height: 20px;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+.progress-info {
+    progress: progressbar;
+    background-color: blue;
+}
+
+.progress-success {
+    progress: progressbar;
+    background-color: green;
+}
+
+.progress-warning {
+    progress: progressbar;
+    background-color: orange;
+}
+
+.progress-danger {
+    progress: progressbar;
+    background-color: red;
+}
+
+.striped {
+    background-image: repeating-linear-gradient(45deg,transparent 0px, transparent 10px, rgba(255,255,255,0.5)10px, rgba(255,255,255,0.5) 20px);
+    background-size: 56px 30px;
+    background-position: 0px, 0px;
+    
+}
+
+.animation {
+    animation: move 10s linear infinite;
+    transition: 1s;
+}
+
+@keyframes move {
+    from{background-position: 0px 0px;}
+    to{background-position: 100% 100%;}
+}
