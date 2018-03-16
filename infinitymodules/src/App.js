@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import  Modal  from './components/Modal/Modal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
-
-
+import NameCard from './components/NameCard/NameCard';
 class App extends Component {
     constructor(props) {
         super(props)
@@ -28,7 +27,14 @@ class App extends Component {
             striped={true}
             animated={true} 
             state="success"/>
+        <NameCard
+            name="Fanney Þóra Vilhjálmsdóttir"
+            email="fanneyv12@ru.is"
+            telephone="+354-866-5544"
+            imageUrl="https://images7.alphacoders.com/633/thumb-350-633262.png"/>
+
       </div>
+
     );
   }
 }

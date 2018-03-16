@@ -1,0 +1,32 @@
+.card {
+    position: relative;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 2px;
+    width: 300px;
+    border: 0.5px solid;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+.name {
+    color: lime;
+    border: 2px;
+}
+.email {
+    font-style: italic;
+}
+.imageUrl {
+    display: inline-block;
+    margin: 10px;
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 50%;
+    height:100px;
+    width: 100px;
+}
