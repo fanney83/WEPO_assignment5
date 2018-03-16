@@ -16,9 +16,9 @@ const NameCard = ({ name, email, telephone, imageUrl }) => {
 };
 
 NameCard.propTypes = {
-    name: PropTypes.name,
-    email: PropTypes.email,
-    telephone: PropTypes.telephone,
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    telephone: PropTypes.string.isRequired,
     imageUrl: PropTypes.string.isRequired
 };
 

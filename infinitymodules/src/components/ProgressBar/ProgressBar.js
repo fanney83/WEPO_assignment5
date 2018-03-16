@@ -36,28 +36,3 @@ ProgressBar.propTypes = {
 };
 
 export default ProgressBar;
-
-
-/*return (
-        <button className={`${styles.btn} ${styles[`btn-${type}`]}`} onClick={onClick}>{children}</button>
-    );*/
-
-    /*.btn {
-    margin: 10px;
-    padding: 10px;
-    box-shadow: 5px 5px 2px rgba(155, 155, 155, .5);
-    font-size: 16px;
-    color: white;
-}
-
-.btn-success {
-    background-color: green;
-}
-
-.btn-warning {
-    background-color: orange;
-}
-
-.btn-danger {
-    background-color: red;
-}*/

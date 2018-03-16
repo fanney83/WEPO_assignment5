@@ -3,6 +3,7 @@ import './App.css';
 import  Modal  from './components/Modal/Modal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
+import Row from './components/Row/Row';
 class App extends Component {
     constructor(props) {
         super(props)
@@ -23,7 +24,7 @@ class App extends Component {
             <Modal.Footer> My Modal Footer</Modal.Footer>
         </Modal>
         <ProgressBar
-            progress={90}
+            progress={50}
             striped={true}
             animated={true} 
             state="success"/>
@@ -32,7 +33,7 @@ class App extends Component {
             email="fanneyv12@ru.is"
             telephone="+354-866-5544"
             imageUrl="https://images7.alphacoders.com/633/thumb-350-633262.png"/>
-
+        <Row/>
       </div>
 
     );
