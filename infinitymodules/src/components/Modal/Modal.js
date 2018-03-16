@@ -5,8 +5,8 @@ import css from './Modal.css';
 const Modal = ({ onClose, isOpen = false, children}) =>  {
     if (isOpen) {
         return (
-            <div className={css.title}>
-                <button onClick={onClose}> Close </button>
+            <div className={css.window}>
+                <button className={css.btn} onClick={onClose}> Close </button>
                 {children}
             </div>
         );
@@ -16,15 +16,15 @@ const Modal = ({ onClose, isOpen = false, children}) =>  {
 // Studdist við þetta
 // https://piazza.com/class/jbzjs3mbfgb4oq?cid=300
 Modal.Title = ({children}) => {
-    return <div>{children}</div>
+    return <div className={css.title}>{children}</div>
 }
 
 Modal.Body = ({children}) => {
-    return <div>{children}</div>
+    return <div className={css.body}>{children}</div>
 }
 
 Modal.Footer = ({children}) => {
-    return <div>{children}</div>
+    return <div className={css.footer}>{children}</div>
 }
 
 Modal.propTypes = {
