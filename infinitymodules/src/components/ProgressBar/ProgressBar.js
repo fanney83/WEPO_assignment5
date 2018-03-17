@@ -36,6 +36,7 @@ ProgressBar.propTypes = {
 };
 
 export default ProgressBar;
+<<<<<<< HEAD
 
 
 /*return (
@@ -61,3 +62,5 @@ export default ProgressBar;
 .btn-danger {
     background-color: red;
 }*/
+=======
+>>>>>>> f0cdd51832206783dd1aef74fdf7c35ba1dbd65e

@@ -28,25 +28,26 @@
 }
 
 .progress-info {
-    progress: progressbar;
+    composes: progressbar;
     background-color: blue;
 }
 
 .progress-success {
-    progress: progressbar;
+    composes: progressbar;
     background-color: green;
 }
 
 .progress-warning {
-    progress: progressbar;
+    composes: progressbar;
     background-color: orange;
 }
 
 .progress-danger {
-    progress: progressbar;
+    composes: progressbar;
     background-color: red;
 }
 
+/*https://www.youtube.com/watch?v=aromfJcfZds*/
 .striped {
     background-image: repeating-linear-gradient(45deg,transparent 0px, transparent 10px, rgba(255,255,255,0.5)10px, rgba(255,255,255,0.5) 20px);
     background-size: 56px 30px;
