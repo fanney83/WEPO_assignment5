@@ -7,17 +7,13 @@ const Row = ({children}) => {
     return (
 
         <div>
-
-            <h1 className={`${styles.test}`}>Bla!!!</h1>
-
+            <h1 className={`${styles.test}`}>Row</h1>
         </div>
-
     );
-
 };
 
 
-Row.PropTypes = {
+Row.propTypes = {
     children: PropTypes.node
 }
 

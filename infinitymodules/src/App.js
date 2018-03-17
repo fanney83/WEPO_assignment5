@@ -4,6 +4,8 @@ import  Modal  from './components/Modal/Modal';
 import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
 import Row from './components/Row/Row';
+import TimePicker from './components/TimePicker/TimePicker';
+import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
 class App extends Component {
     constructor(props) {
         super(props)
@@ -34,6 +36,11 @@ class App extends Component {
             telephone="+354-866-5544"
             imageUrl="https://images7.alphacoders.com/633/thumb-350-633262.png"/>
         <Row/>
+        <TimePicker
+            onTimePick={time => this.setState({ time })}
+            format={12} />
+        <CartoonNetworkSpinner
+            interval={3}/>
       </div>
 
     );

@@ -31,22 +31,22 @@
 }
 
 .progress-info {
-    progress: progressbar;
+    composes: progressbar;
     background-color: blue;
 }
 
 .progress-success {
-    progress: progressbar;
+    composes: progressbar;
     background-color: green;
 }
 
 .progress-warning {
-    progress: progressbar;
+    composes: progressbar;
     background-color: orange;
 }
 
 .progress-danger {
-    progress: progressbar;
+    composes: progressbar;
     background-color: red;
 }
 
