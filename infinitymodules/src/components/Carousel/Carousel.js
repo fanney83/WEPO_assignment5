@@ -1,12 +1,11 @@
 import React from 'react';
 import css from './Carousel.css';
 
-const Carousel = ({images, size}) => {
-    const img = images.map((img) =>
-    <li>{images}</li>
-);
+const Carousel = ({images, size = 'medium'}) => {
     return (
-        <div style={{ backgroundImage: `url(${img})` }}>className={`${css.img}`}</div>
+        <div className={css.carousel}>
+            {images.map((img) => <img className={css[`img-${size}`]} src={img} />)}
+        </div>
     );
 };
 

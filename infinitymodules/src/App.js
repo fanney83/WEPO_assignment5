@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import  Modal  from './components/Modal/Modal';
-//import ProgressBar from './components/ProgressBar/ProgressBar';
+import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
 import Carousel from './components/Carousel/Carousel';
 class App extends Component {
@@ -23,10 +23,11 @@ class App extends Component {
                 <Modal.Body> My Modal Body</Modal.Body>
                 <Modal.Footer> My Modal Footer</Modal.Footer>
             </Modal>
-            {/*<ProgressBar
+            <ProgressBar
                 progress={50}
                 striped={true}
-                animated={true} />*/}
+                animated={true}
+                state={'success'} />
             <NameCard
                 name="Fanney Þóra Vilhjálmsdóttir"
                 email="fanneyv12@ru.is"

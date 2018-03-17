@@ -2,13 +2,10 @@
 .window {
     background-image: linear-gradient(90deg, lime, yellow);
     border-radius: 1px;
-    width: 400px;
+    width: 350px;
     border: 0.2px solid #555;
     margin: 300px auto;
     text-align: center;
-    display: flex;
-    align-content: flex-end;
-    flex-direction: row-reverse;
     padding: 10px;
 }
 
@@ -23,13 +20,16 @@
 }
 
 .footer {
+    padding-bottom: 20px;
     font-weight: lighter;
     text-align: center;
 }
 
 .btn {
+
     border-radius: 0.2px;
     padding: 4px;
+
 }
 
 .btn:hover {
