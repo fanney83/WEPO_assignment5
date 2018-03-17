@@ -1,20 +1,52 @@
 
 .carousel {
     padding: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.img {
+position: relative;
+    animation: slide 0.5s forwards;
 }
 
 .img-small {
+    composes: img;
     width: 100px;
-    height: 100px
+    height: 100px;
+    left: 100px;
 }
 
-
 .img-medium {
+    composes: img;
     width: 200px;
     height: 200px;
+    left: 200px;
 }
 
 .img-large {
+    composes: img;
     width: 300px;
     height: 300px;
+    left: 300px;
+}
+.button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  perspective: 10000px;
+}
+
+.left {
+  height: 10px;
+  width: 10px;
+  border: solid grey;
+  border-width: 2px 0 0 2px;
+  display: inline-block;
+  transform: rotateY(135deg) rotateZ(135deg);
+}
+
+.right {
+  composes: left;
+  border-width: 0 2px 2px 0;
 }

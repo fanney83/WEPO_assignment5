@@ -6,7 +6,7 @@ import Image from '../../images/CartoonNetworkSpinner/stewie.jpg';
 
 console.log(styles);
 class CartoonNetworkSpinner extends React.Component {
-    
+
     /*skoða
         https://stackoverflow.com/questions/38387822/how-to-rotate-img-source-at-interval-in-a-react-component
     */
@@ -26,7 +26,7 @@ class CartoonNetworkSpinner extends React.Component {
     componentDidMount () {
         setInterval(this.setImage.bind(this) ,this.props.interval * 1000)
     }
-     
+
     setImage() {
         this.setState({ currentImage: this.getRandomImageId() });
     }
@@ -36,15 +36,15 @@ class CartoonNetworkSpinner extends React.Component {
             "../../images/CartoonNetworkSpinner/stewie.jpg",
             "../../images/CartoonNetworkSpinner/stewieguns.png"
         ];
-        return (        
-            <div className={styles.clock}>   
+        return (
+            <div className={styles.clock}>
                 <h2>Cartoon Network Spinner</h2>
-                <img src={images[this.state.currentImage]} />
+                <img src={images[this.state.currentImage]} alt=""/>
                 <img src={Image} className={` ${styles.image}`} alt=""/>
             </div>
         );
     }
-    
+
 };
 
 
@@ -86,7 +86,7 @@ render: function() {
 
 /*timer: function() {
    var newCount = this.state.currentCount - 1;
-   if(newCount >= 0) { 
+   if(newCount >= 0) {
        this.setState({ currentCount: newCount });
    } else {
        clearInterval(this.state.intervalId);
