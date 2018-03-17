@@ -3,18 +3,23 @@
     left: 30px;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 10px;
     border: 2px;
-    width: 300px;
+    width: 200px;
     border: 0.5px solid;
+    font-size: 14px;
+    line-height: 18px;
 
 }
 
 .info {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .name {
+    text-align: center;
     color: lime;
     border: 2px;
 }
