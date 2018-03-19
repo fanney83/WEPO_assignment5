@@ -1,0 +1,29 @@
+.tabContainer {
+    height: 400px;
+    width: 600px;
+    position: relative;
+    left: 100px;
+}
+
+.layout-horizontal {
+    composes: tabContainer;
+
+}
+
+.layout-vertical {
+    composes: tabContainer;
+}
+
+.theme-dark {
+    composes: tabContainer;
+    font-family: cursive;
+    background-color: #242526;
+    color: #f2f3f4;
+}
+.theme-ligth {
+    composes: tabContainer;
+    background-color: #ddeeff;
+    color: #42484f;
+    font-family: sans-serif;
+
+}

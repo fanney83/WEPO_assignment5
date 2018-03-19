@@ -1,18 +1,26 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import css from './Tab.css'
+
+
+
+
 
 class Tab extends React.Component {
+
     constructor(props) {
         super(props);
         this.state = {
-            currentSelectedTab: Tabs,
-            selectionKey: number
+
         }
     }
 
     render() {
+        const {selectionKey, title} = this.props;
         return (
-            <div>{this.state.selectionKey}</div>
+            <div className={css.tabBody}>
+                <div>{title}</div>
+                <div>{selectionKey}</div>
+            </div>
         );
     };
 }

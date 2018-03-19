@@ -7,8 +7,9 @@ import Carousel from './components/Carousel/Carousel';
 import Row from './components/Row/Row';
 import TimePicker from './components/TimePicker/TimePicker';
 import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
-//import Tab from './components/Tab/Tab';
-//import Tabs from './components/Tabs/Tabs';
+import Tab from './components/Tab/Tab';
+import Tabs from './components/Tabs/Tabs';
+import DatePicker from './components/DatePicker/DatePicker';
 
 
 class App extends Component {
@@ -52,10 +53,15 @@ class App extends Component {
             <TimePicker
                 onTimePick={time => this.setState({ time })}
                 format={12} />
+
+            <DatePicker
+                onDatePick={date => this.setState({ date })}
+                locale="en-EN" />
+
             <CartoonNetworkSpinner
                 interval={3}/>
 
-            {/*<Tabs
+            <Tabs
                 theme="dark"
                 layout="horizontal"
                 onSelect={newTab => this.setState({ tab: newTab })}
@@ -69,7 +75,7 @@ class App extends Component {
                 <Tab selectionKey={3} title="Tab 3">
                     Content 3
                 </Tab>
-            </Tabs>*/}
+            </Tabs>
 
       </div>
 

@@ -20,22 +20,22 @@
     height: 300px;
 }
 .button {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  perspective: 10000px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    perspective: 10000px;
 }
 
 .left {
-  height: 10px;
-  width: 10px;
-  border: solid grey;
-  border-width: 2px 0 0 2px;
-  display: inline-block;
-  transform: rotateY(135deg) rotateZ(135deg);
+    height: 10px;
+    width: 10px;
+    border: solid grey;
+    border-width: 2px 0 0 2px;
+    display: inline-block;
+    transform: rotateY(135deg) rotateZ(135deg);
 }
 
 .right {
-  composes: left;
-  border-width: 0 2px 2px 0;
+    composes: left;
+    border-width: 0 2px 2px 0;
 }
