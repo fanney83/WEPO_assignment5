@@ -5,11 +5,12 @@ import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
 import Carousel from './components/Carousel/Carousel';
 import Row from './components/Row/Row';
-import TimePicker from './components/TimePicker/TimePicker';
-import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
+//import TimePicker from './components/TimePicker/TimePicker';
+//import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
 import Tab from './components/Tab/Tab';
 import Tabs from './components/Tabs/Tabs';
 import DatePicker from './components/DatePicker/DatePicker';
+import Col from './components/Col/Col';
 
 
 class App extends Component {
@@ -49,17 +50,21 @@ class App extends Component {
                 ]}
                 size="medium" />
 
-            <Row/>
-            <TimePicker
+            <Row>
+                <Col size={4}></Col>
+                <Col size={4}></Col>
+                <Col size={4}></Col>
+            </Row>
+            {/*<TimePicker
                 onTimePick={time => this.setState({ time })}
-                format={12} />
+                format={12} />*/}
 
-            <DatePicker
+            {/*<DatePicker
                 onDatePick={date => this.setState({ date })}
-                locale="en-EN" />
+                locale="en-EN" />*/}
 
-            <CartoonNetworkSpinner
-                interval={3}/>
+            {/*<CartoonNetworkSpinner
+                interval={3}/>*/}
 
             <Tabs
                 theme="dark"
