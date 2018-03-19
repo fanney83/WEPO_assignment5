@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './CartoonNetworkSpinner.css';
 
-import Image from '../../images/CartoonNetworkSpinner/stewie.jpg';
+
+/*https://stackoverflow.com/questions/44607396/importing-multiple-files-in-react*/
+function importAll(r) {
+    let images = {};
+    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    return images;
+}
+
+const images = importAll(require.context('../../images/CartoonNetworkSpinner/', false, /\.png$/));
+
 
 console.log(styles);
 class CartoonNetworkSpinner extends React.Component {
@@ -14,33 +23,42 @@ class CartoonNetworkSpinner extends React.Component {
    constructor(props) {
         super(props);
         this.state = {
-            currentImage: 0
+            currentImage: 0,
+            Spin: false,
+            waitTime: false
         };
     }
+
+    componentDidMount() {
+
+        setInterval(this.setWaitTime.bind(this), this.props.interval * 1000);
+    }
+
+    setWaitTime() {
+        this.setState({Spin: !this.state.Spin});
+        this.setState({currentImage: this.getRandomImageId()});
+        //setInterval(this.setRandomImage.bind(this), this.props.interval * 1000);
+
+    }
+
+    setRandomImage() {
+        this.setState({currentImage: this.getRandomImageId()});
+    }
+
     getRandomImageId() {
-        const min = 0;
-        const max = 3;
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    componentDidMount () {
-        setInterval(this.setImage.bind(this) ,this.props.interval * 1000)
-    }
-
-    setImage() {
-        this.setState({ currentImage: this.getRandomImageId() });
+        return Math.floor(1 + Math.random() * 8);
     }
 
     render () {
-        const images = [
-            "../../images/CartoonNetworkSpinner/stewie.jpg",
-            "../../images/CartoonNetworkSpinner/stewieguns.png"
-        ];
+
         return (
+
             <div className={styles.clock}>
                 <h2>Cartoon Network Spinner</h2>
-                <img src={images[this.state.currentImage]} alt=""/>
-                <img src={Image} className={` ${styles.image}`} alt=""/>
+                {this.state.Spin ?
+                    <img src={images[this.state.currentImage + '.png']} className={` ${styles.image} ${styles.spinner}`} alt=""/> :
+                    <img  src={images[this.state.currentImage + '.png']} className={` ${styles.image}`} alt=""/>}
+
             </div>
         );
     }
@@ -58,37 +76,3 @@ CartoonNetworkSpinner.defaultProps = {
 }
 
 export default CartoonNetworkSpinner;
-
-/*componentDidMount: function() {
-   var intervalId = setInterval(this.timer, 1000);
-   // store intervalId in the state so it can be accessed later:
-   this.setState({intervalId: intervalId});
-},
-
-componentWillUnmount: function() {
-   // use intervalId from the state to clear the interval
-   clearInterval(this.state.intervalId);
-},
-
-timer: function() {
-   // setState method is used to update the state
-   this.setState({ currentCount: this.state.currentCount -1 });
-},
-
-render: function() {
-    // You do not need to decrease the value here
-    return (
-      <section>
-       {this.state.currentCount}
-      </section>
-    );
-}*/
-
-/*timer: function() {
-   var newCount = this.state.currentCount - 1;
-   if(newCount >= 0) {
-       this.setState({ currentCount: newCount });
-   } else {
-       clearInterval(this.state.intervalId);
-   }
-},*/

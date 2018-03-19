@@ -1,5 +1,7 @@
 
-
+.clock {
+    position: relative;
+}
 
 .image {
     position: absolute;
@@ -8,15 +10,14 @@
     width: 120px;
     height: 120px;
     margin:-60px 0 0 -60px;
-    
 }
 
 
 /*https://stackoverflow.com/questions/16771225/css3-rotate-animation/*/
 .spinner {
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
 }
 
 @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }

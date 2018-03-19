@@ -1,0 +1,18 @@
+
+.Tabs-dark {
+    background-color: #7C7C7C;
+    color: white;
+}
+
+.Tabs-light {
+    background-color: #A8A7A7;
+    color: white;
+}
+
+.Tabs-horizontal {
+    display: inline-block;
+}
+
+.Tabs-vertical {
+    display: block;
+}
