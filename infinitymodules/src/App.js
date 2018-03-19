@@ -18,6 +18,7 @@ class App extends Component {
         super(props)
         this.state = {
             isOpen: false,
+            tab: 1,
         }
     }
 
@@ -55,6 +56,7 @@ class App extends Component {
                 <Col size={4}></Col>
                 <Col size={4}></Col>
             </Row>
+
             {/*<TimePicker
                 onTimePick={time => this.setState({ time })}
                 format={12} />*/}

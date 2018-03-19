@@ -1,7 +1,29 @@
+.buttonContainer {
+
+}
+
+.buttonContainer > * {
+    margin-left: 5px;
+}
+
+.button {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    background-color: blue;
+}
+
+.activeButton {
+    composes: button;
+    background-color: yellow;
+}
+
 .tabContainer {
+    position: absolute;
     height: 400px;
     width: 600px;
     left: 100px;
+
 }
 
 .layout-horizontal {
@@ -19,7 +41,7 @@
     background-color: #242526;
     color: #f2f3f4;
 }
-.theme-ligth {
+.theme-light {
     composes: tabContainer;
     background-color: #ddeeff;
     color: #42484f;

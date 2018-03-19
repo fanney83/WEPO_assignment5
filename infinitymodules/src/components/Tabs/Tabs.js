@@ -3,31 +3,27 @@ import Tab from '../Tab/Tab';
 import css from './Tabs.css';
 
 class Tabs extends React.Component {
-
-
-    onSelect(currentSelectedTab) {
-        var x = document.getElementsByClassName('Tab');
-        for (var i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-        }
-        document.getElementsByClassName(currentSelectedTab).style.display = "block";
-    }
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentSelectedTab: 1,
-            title: ''
-        };
-
-    }
     render() {
-        const {colorTheme = 'dark', children, currentSelectedTab } = this.props;
+        const {theme = 'light', children, onSelect, currentSelectedTab } = this.props;
         return (
-            <div className={css[`theme-${colorTheme}`]}>
-                <button onClick={()=>this.onSelect(this.state.currentSelectedTab)}>{children}</button>
-                {console.log(css[`theme-${colorTheme}`])}
+            <div className={css[`theme-${theme}`]}>
+                <div className={css.buttonContainer}>
+                    {children.map((tab, index) =>
+                        <button
+                            className={
+                                currentSelectedTab === tab.props.selectionKey ?
+                                css.activeButton :
+                                css.button}
+                            key={index}
+                            onClick={() => onSelect(tab.props.selectionKey)}>
+                            {tab.props.title}
+                        </button>)
+                    }
+                </div>
+                {children[currentSelectedTab - 1]}
             </div>
         );
+
     };
 
 }

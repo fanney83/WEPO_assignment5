@@ -5,9 +5,7 @@ import styles from './Row.css';
 const Row = ({ children }) => {
     return (
         <div className={`${styles.container}`}>
-            <div>
-                {children}
-            </div>
+            {children}
         </div>
     );
 };
