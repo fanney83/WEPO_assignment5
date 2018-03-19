@@ -2,19 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Row.css';
 
-const Row = ({children}) => {
-
+const Row = ({ children }) => {
     return (
-
-        <div>
-            <h1 className={`${styles.test}`}>Row</h1>
+        <div className={`${styles.container}`}>
+            <div>
+                {children}
+            </div>
         </div>
     );
 };
 
-
 Row.propTypes = {
-    children: PropTypes.node
-}
+    children: PropTypes.node.isRequired
+};
 
 export default Row;
