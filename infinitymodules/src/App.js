@@ -7,6 +7,9 @@ import Carousel from './components/Carousel/Carousel';
 import Row from './components/Row/Row';
 import TimePicker from './components/TimePicker/TimePicker';
 import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
+//import Tab from './components/Tab/Tab';
+//import Tabs from './components/Tabs/Tabs';
+
 
 class App extends Component {
     constructor(props) {
@@ -51,6 +54,22 @@ class App extends Component {
                 format={12} />
             <CartoonNetworkSpinner
                 interval={3}/>
+
+            {/*<Tabs
+                theme="dark"
+                layout="horizontal"
+                onSelect={newTab => this.setState({ tab: newTab })}
+                currentSelectedTab={this.state.tab}>
+                <Tab selectionKey={1} title="Tab 1">
+                    Content 1
+                </Tab>
+                <Tab selectionKey={2} title="Tab 2">
+                    Content 2
+                </Tab>
+                <Tab selectionKey={3} title="Tab 3">
+                    Content 3
+                </Tab>
+            </Tabs>*/}
 
       </div>
 

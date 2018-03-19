@@ -6,8 +6,8 @@ const Modal = ({ onClose, isOpen = false, children}) =>  {
     if (isOpen) {
         return (
             <div className={css.window}>
+                <button className={css.btn} onClick={onClose}> X </button>
                 {children}
-                <button className={css.btn} onClick={onClose}> Close </button>
             </div>
         );
     }
