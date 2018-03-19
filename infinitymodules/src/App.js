@@ -5,10 +5,15 @@ import ProgressBar from './components/ProgressBar/ProgressBar';
 import NameCard from './components/NameCard/NameCard';
 import Carousel from './components/Carousel/Carousel';
 import Row from './components/Row/Row';
+import Col from './components/Col/Col';
 import TimePicker from './components/TimePicker/TimePicker';
+import DatePicker from './components/DatePicker/DatePicker';
 import Tabs from './components/Tabs/Tabs';
 import Tab from './components/Tab/Tab';
 import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
+//import Tab from './components/Tab/Tab';
+//import Tabs from './components/Tabs/Tabs';
+
 
 class App extends Component {
     constructor(props) {
@@ -62,24 +67,40 @@ class App extends Component {
                         'http://cdn1-www.comingsoon.net/assets/uploads/2017/12/Screen-Shot-2017-12-14-at-5.13.15-PM-e1513300425439.jpg'
                     ]}
                     size="medium" />
-                <Row/>
+                <Row>
+                    <Col size={4}></Col>
+                    <Col size={4}></Col>
+                    <Col size={4}></Col>
+                </Row>
+
                 <TimePicker
                     onTimePick={time => this.setState({ time })}
                     format={24} />
+                <DatePicker
+                    onDatePick={date => this.setState({ date })}
+                    locale="en-EN" />
                 <Tabs
-                    theme="light"
+                    theme="dark"
                     layout="horizontal"
-                    onSelect={newTab => this.setState({tab: newTab})}
+                    onSelect={newTab => this.setState({ tab: newTab })}
                     currentSelectedTab={this.state.tab}>
-                    <Tab selectionkey={1} title="Tab 1">
-                        test!
+                    <Tab selectionKey={1} title="Tab 1">
+                        Content 1
+                    </Tab>
+                    <Tab selectionKey={2} title="Tab 2">
+                        Content 2
+                    </Tab>
+                    <Tab selectionKey={3} title="Tab 3">
+                        Content 3
                     </Tab>
                 </Tabs>
                 <CartoonNetworkSpinner
                     interval={3}/>
+
           </div>
 
-        );
+
+    );
   }
 }
 

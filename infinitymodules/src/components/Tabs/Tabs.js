@@ -5,20 +5,34 @@ import styles from './Tabs.css';
 class Tabs extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            currentTab: null
+        }
     }
+
+    buildTabs() {
+        var tabs = [];
+        for(var i = 0; i < this.props.children.length; i++) {
+            console.log('slectionkey ' + this.props.children[i].props.selectionKey);
+            console.log('title ' + this.props.children[i].props.title);
+            tabs.push(<button onClick={ () => this.props.onSelect(this.props.children[i].props.selectionKey)} key={this.props.children[i].props.selectionKey}>{this.props.children[i].props.title}</button>);
+        }
+        return tabs;
+    }
+
     render() {
 
+        var tabs = this.buildTabs();
         const selectedProps = this.props.currentSelectedTab;
-        console.log(selectedProps);
-        console.log(this.props.onSelect);
-        console.log(this.props.children[selectedProps]);
+
+        console.log(tabs);
+
         return (
 
             <div className={`${styles[`Tabs-${this.props.theme}`]}`}>
                 {this.props.theme}
                 <div className={`${styles[`Tabs-${this.props.layout}`]}`}>
-                    {this.props.layout}
-                    {this.props.children[selectedProps]}
+                    {tabs}
                 </div>
             </div>
         );

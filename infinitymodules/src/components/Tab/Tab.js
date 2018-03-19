@@ -8,7 +8,7 @@ class Tab extends React.Component {
     }
 }
 Tab.propTypes = {
-    selectionkey: PropTypes.number.isRequired,
+    selectionKey: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired
 };
 

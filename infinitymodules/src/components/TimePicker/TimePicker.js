@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './TimePicker.css';
 
 class TimePicker extends React.Component {
-        
+
     handleClick(e) {
         console.log(e.clientX);
         console.log('this is:', this);
@@ -14,13 +14,13 @@ class TimePicker extends React.Component {
 
         if(this.props.format === 24) {
             TimeFormat = 12;
-        } 
+        }
         else {
             TimeFormat = 0;
         }
-        
-        return (        
-            <div className={styles.clock}>   
+
+        return (
+            <div className={styles.clock}>
                 <div className={`${styles.num} ${styles.num1}`}><button onClick={(e) => this.handleClick(e)}>{TimeFormat + 1}</button></div>
                 <div className={`${styles.num} ${styles.num2}`}><button onClick={(e) => this.handleClick(e)}>{TimeFormat + 2}</button></div>
                 <div className={`${styles.num} ${styles.num3}`}><button onClick={(e) => this.handleClick(e)}>{TimeFormat + 3}</button></div>
@@ -37,8 +37,8 @@ class TimePicker extends React.Component {
             </div>
         );
     }
-    
-    
+
+
 };
 
 

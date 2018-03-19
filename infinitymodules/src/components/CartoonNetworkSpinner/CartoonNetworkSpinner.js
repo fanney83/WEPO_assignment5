@@ -12,8 +12,6 @@ function importAll(r) {
 
 const images = importAll(require.context('../../images/CartoonNetworkSpinner/', false, /\.png$/));
 
-
-console.log(styles);
 class CartoonNetworkSpinner extends React.Component {
 
     /*skoða
