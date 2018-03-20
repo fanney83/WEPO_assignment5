@@ -2,7 +2,6 @@
 .window {
     position: absolute;
     background-color: #93d8d0;
-
     top: 0;
     bottom: 0;
     right: 0;
@@ -10,6 +9,7 @@
     margin: 300px auto;
     width: 60%;
     height: 60%;
+    z-index: 1000;
 }
 
 .title {

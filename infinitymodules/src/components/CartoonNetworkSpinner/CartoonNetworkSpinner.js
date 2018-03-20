@@ -6,7 +6,9 @@ import styles from './CartoonNetworkSpinner.css';
 /*https://stackoverflow.com/questions/44607396/importing-multiple-files-in-react*/
 function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+    r.keys().map((item, index) => {
+        images[item.replace('./', '')] = r(item);
+    });
     return images;
 }
 
@@ -21,26 +23,17 @@ class CartoonNetworkSpinner extends React.Component {
    constructor(props) {
         super(props);
         this.state = {
-            currentImage: 0,
-            Spin: false,
-            waitTime: false
+            currentImage: 0
         };
     }
 
     componentDidMount() {
-
         setInterval(this.setWaitTime.bind(this), this.props.interval * 1000);
     }
 
     setWaitTime() {
-        this.setState({Spin: !this.state.Spin});
         this.setState({currentImage: this.getRandomImageId()});
         //setInterval(this.setRandomImage.bind(this), this.props.interval * 1000);
-
-    }
-
-    setRandomImage() {
-        this.setState({currentImage: this.getRandomImageId()});
     }
 
     getRandomImageId() {
@@ -48,19 +41,15 @@ class CartoonNetworkSpinner extends React.Component {
     }
 
     render () {
-
         return (
-
-            <div className={styles.clock}>
+            <div className={styles.CartoonNetworkSpinner}>
                 <h2>Cartoon Network Spinner</h2>
-                {this.state.Spin ?
-                    <img src={images[this.state.currentImage + '.png']} className={` ${styles.image} ${styles.spinner}`} alt=""/> :
-                    <img  src={images[this.state.currentImage + '.png']} className={` ${styles.image}`} alt=""/>}
-
+                    <img src={images[this.state.currentImage + '.png']} className={`${styles.image}`}
+                        style={{'WebkitAnimationDuration': this.props.interval+'s'}}
+                     alt="cartoonImage"/>
             </div>
         );
     }
-
 };
 
 

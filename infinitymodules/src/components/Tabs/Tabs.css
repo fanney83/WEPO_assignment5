@@ -3,44 +3,56 @@
 }
 
 .buttonContainer > * {
-    margin-left: 5px;
+    font-size: 15px;
 }
 
 .button {
+    padding: 10px 20px 10px 20px;
     border-radius: 2px;
     outline: none;
     border: none;
-    background-color: blue;
+    color: inherit;
+    font-family: inherit;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    cursor:pointer;
+    overflow: hidden;
 }
 
 .activeButton {
     composes: button;
-    background-color: yellow;
+    font-weight: 600;
+    background-color: rgba(255,255,255,0.6);
+    border-bottom: 1px solid #9999;
 }
 
+
 .tabContainer {
-    position: relative;
+    margin-top: 20px;
+    position: absolute;
     height: 400px;
     width: 600px;
     left: 100px;
-
 }
 
-.horizontal {
-    display: inline-block;
+.layout-horizontal {
+    composes: buttonContainer;
+    display: flex;
+    flex-direction: row;
+    top: 0;
 }
 
-.vertical {
-    display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
+.layout-vertical {
+    composes: buttonContainer;
+    display: flex;
+    flex-direction: column;
+    float: left;
 }
 
-.theme-dark {
+.theme-dark  {
     composes: tabContainer;
-    font-family: cursive;
-    background-color: #242526;
+    font-family: fantasy;
+    background-color: #3a3a3a;
     color: #f2f3f4;
 }
 .theme-light {
