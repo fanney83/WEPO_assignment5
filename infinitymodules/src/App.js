@@ -69,7 +69,7 @@ class App extends Component {
                 interval={3}/>*/}
 
             <Tabs
-                theme="dark"
+                theme="light"
                 layout="horizontal"
                 onSelect={newTab => this.setState({ tab: newTab })}
                 currentSelectedTab={this.state.tab}>
