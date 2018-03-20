@@ -13,7 +13,8 @@ class DatePicker extends React.Component {
         super(props);
         this.state = {
             year: date.getFullYear(),
-            month: date.getMonth()
+            month: date.getMonth(),
+            day: date.getDay()
         }
     }
 
@@ -23,13 +24,36 @@ class DatePicker extends React.Component {
 
     render() {
         const getAllDays = this.getDays();
+        // https://www.w3schools.com/js/tryit.asp?filename=tryjs_date_weekday
 
+        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+        var d = new Date();
+        const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+        const months = ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+
+        console.log("The current month is " + months[d.getMonth()]);
+        console.log('today is: ' + days[d.getDay()]);
+        console.log('todays date is: ' + d.toUTCString());
+        console.log('todays date is: ' + d.toDateString());
+        console.log(d.getDate());
+        // var d = new Date(99,5,24);
+        console.log(d.toDateString());
+
+        console.log(d.toLocaleString(this.props.locale));
 
         return (
             <div >
-                {this.state.year}
-                {this.state.month + 1}
-                {date.getDay()}
+                <h2>Today is {d.toLocaleString(this.props.locale)} </h2>
+                <button>+</button>
+                <button>-</button>
+                <button>+</button>
+                <button>-</button>
+                <button>+</button>
+                <button>-</button>
+
+                <button>Done</button>
             </div>
         );
 
