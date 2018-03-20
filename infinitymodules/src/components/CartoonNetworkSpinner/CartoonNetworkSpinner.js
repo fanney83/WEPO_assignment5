@@ -42,11 +42,33 @@ class CartoonNetworkSpinner extends React.Component {
 
     render () {
         return (
-            <div className={styles.CartoonNetworkSpinner}>
-                <h2>Cartoon Network Spinner</h2>
-                    <img src={images[this.state.currentImage + '.png']} className={`${styles.image}`}
-                        style={{'WebkitAnimationDuration': this.props.interval+'s'}}
-                     alt="cartoonImage"/>
+            <div className={styles.spinnerContainer}>
+                <div className={styles.titleContainer}>
+                    <div className={styles.upperRow}>
+                        <span className={styles.letterWhite}>C</span>
+                        <span className={styles.letterBlack}>A</span>
+                        <span className={styles.letterWhite}>R</span>
+                        <span className={styles.letterBlack}>T</span>
+                        <span className={styles.letterWhite}>O</span>
+                        <span className={styles.letterBlack}>O</span>
+                        <span className={styles.letterWhite}>N</span>
+                    </div>
+                    <div className={styles.lowerRow}>
+                        <span className={styles.letterBlack}>N</span>
+                        <span className={styles.letterWhite}>E</span>
+                        <span className={styles.letterBlack}>T</span>
+                        <span className={styles.letterWhite}>W</span>
+                        <span className={styles.letterBlack}>O</span>
+                        <span className={styles.letterWhite}>R</span>
+                        <span className={styles.letterBlack}>K</span>
+                    </div>
+                    <span className={styles.letter}>Spinner</span>
+                </div>
+                <div className={styles.CartoonNetworkSpinner}>
+                        <img src={images[this.state.currentImage + '.png']} className={`${styles.image}`}
+                            style={{'WebkitAnimationDuration': this.props.interval+'s'}}
+                         alt="cartoonImage"/>
+                </div>
             </div>
         );
     }

@@ -1,6 +1,5 @@
 import React from 'react';
 import propTypes from 'prop-types';
-import css from './Tab.css'
 
 class Tab extends React.Component {
     render() {

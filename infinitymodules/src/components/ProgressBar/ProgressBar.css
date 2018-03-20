@@ -5,11 +5,9 @@
     font-size: 30px;
     text-align: center;
     color: black;
-
 }
 
 .progressbar {
-
     background-color: #fff;
     border: 1px solid #ccc;
     margin: 50px, auto;
@@ -17,7 +15,7 @@
     border-radius: 13px;
     height: 26px;
     width: 506px;
-    transition: 1s;
+transition: 1s;
 }
 
 .progress{

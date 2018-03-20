@@ -11,9 +11,6 @@ import DatePicker from './components/DatePicker/DatePicker';
 import Tabs from './components/Tabs/Tabs';
 import Tab from './components/Tab/Tab';
 import CartoonNetworkSpinner from './components/CartoonNetworkSpinner/CartoonNetworkSpinner';
-//import Tab from './components/Tab/Tab';
-//import Tabs from './components/Tabs/Tabs';
-
 
 class App extends Component {
     constructor(props) {
@@ -96,10 +93,7 @@ class App extends Component {
                 </Tabs>
                 <CartoonNetworkSpinner
                     interval={3}/>
-
           </div>
-
-
     );
   }
 }
