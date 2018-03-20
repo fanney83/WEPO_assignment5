@@ -4,7 +4,7 @@ import css from './Tabs.css';
 
 class Tabs extends React.Component {
     render() {
-        const {theme = 'light', children, onSelect, currentSelectedTab, layout } = this.props;
+        const {theme = 'light', children, onSelect, currentSelectedTab, layout='horizontal' } = this.props;
         return (
             <div className={css[`theme-${theme}`]}>
                     <div className={css[`layout-${layout}`]}>
