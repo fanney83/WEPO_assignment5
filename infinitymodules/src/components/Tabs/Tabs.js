@@ -1,55 +1,45 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Tabs.css';
+import propTypes from 'prop-types';
+import css from './Tabs.css';
 
 class Tabs extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            currentTab: null
-        }
-    }
-
-    buildTabs() {
-        var tabs = [];
-        for(var i = 0; i < this.props.children.length; i++) {
-            console.log('slectionkey ' + this.props.children[i].props.selectionKey);
-            console.log('title ' + this.props.children[i].props.title);
-            tabs.push(<button onClick={ () => this.props.onSelect(this.props.children[i].props.selectionKey)} key={this.props.children[i].props.selectionKey}>{this.props.children[i].props.title}</button>);
-        }
-        return tabs;
-    }
 
     render() {
-
-        var tabs = this.buildTabs();
-        const selectedProps = this.props.currentSelectedTab;
-
-        console.log(tabs);
-
+        const {theme = 'light', children, onSelect, currentSelectedTab } = this.props;
+        console.log(this.props.layout);
         return (
-
-            <div className={`${styles[`Tabs-${this.props.theme}`]}`}>
-                {this.props.theme}
-                <div className={`${styles[`Tabs-${this.props.layout}`]}`}>
-                    {tabs}
+            <div className={`${css[`theme-${theme}`]} `}>
+                <div className={`${css.buttonContainer} `}>
+                    {children.map((tab, index) =>
+                        <button
+                            className={
+                                currentSelectedTab === tab.props.selectionKey ?
+                                css.activeButton :
+                                css.button}
+                            key={index}
+                            onClick={() => onSelect(tab.props.selectionKey)}>
+                            {tab.props.title}
+                        </button>)
+                    }
                 </div>
+                {children[currentSelectedTab - 1]}
             </div>
         );
-    }
+
+    };
+
 }
 
 Tabs.propTypes = {
-    theme: PropTypes.string.isRequired,
-    layout: PropTypes.string.isRequired,
-    onSelect: PropTypes.func.isRequired,
-    currentSelectedTab: PropTypes.number,
+    theme: propTypes.string.isRequired,
+    layout: propTypes.string.isRequired,
+    onSelect: propTypes.func.isRequired,
+    currentSelectedTab: propTypes.number,
 }
 
 Tabs.defaultProps = {
     theme: "light",
     layout: "horizontal",
-
 }
 
 

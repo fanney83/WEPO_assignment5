@@ -1,15 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import styles from './Tab.css';
+import propTypes from 'prop-types';
+import css from './Tab.css'
 
 class Tab extends React.Component {
-    render () {
-        return <div>{this.props.children}</div>
-    }
+    render() {
+        const {selectionKey, title, children} = this.props;
+        return children;
+    };
 }
 Tab.propTypes = {
-    selectionKey: PropTypes.number.isRequired,
-    title: PropTypes.string.isRequired
+    selectionKey: propTypes.number.isRequired,
+    title: propTypes.string.isRequired
 };
 
 export default Tab;

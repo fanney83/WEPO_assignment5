@@ -20,7 +20,7 @@ class App extends Component {
         super(props)
         this.state = {
             isOpen: false,
-            tab: 0
+            tab: 1,
         }
     }
 
@@ -81,7 +81,7 @@ class App extends Component {
                     locale="en-EN" />
                 <Tabs
                     theme="dark"
-                    layout="horizontal"
+                    layout="vertical"
                     onSelect={newTab => this.setState({ tab: newTab })}
                     currentSelectedTab={this.state.tab}>
                     <Tab selectionKey={1} title="Tab 1">

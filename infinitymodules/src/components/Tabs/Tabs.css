@@ -1,58 +1,52 @@
+.buttonContainer {
 
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
 }
 
-.Tabs-dark {
-    composes: tab;
-    background-color: #7C7C7C;
-    color: white;
+.buttonContainer > * {
+    margin-left: 5px;
 }
 
-.Tabs-light {
-    composes: tab;
-    background-color: #A8A7A7;
-    color: white;
+.button {
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    background-color: blue;
 }
 
-.Tabs-horizontal {
+.activeButton {
+    composes: button;
+    background-color: yellow;
+}
+
+.tabContainer {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    left: 100px;
+
+}
+
+.horizontal {
     display: inline-block;
 }
 
-.Tabs-vertical {
+.vertical {
     display: block;
-}
-
-
-
-/* Style the buttons inside the tab */
-.tab button {
     background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
+    color: black;
+    padding: 22px 16px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
+.theme-dark {
+    composes: tabContainer;
+    font-family: cursive;
+    background-color: #242526;
+    color: #f2f3f4;
 }
+.theme-light {
+    composes: tabContainer;
+    background-color: #ddeeff;
+    color: #42484f;
+    font-family: sans-serif;
 
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
 }
