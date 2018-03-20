@@ -42,7 +42,6 @@ class TimePicker extends React.Component {
 };
 
 
-
 TimePicker.propTypes = {
     onTimePick: PropTypes.func.isRequired,
     format: PropTypes.oneOf([24, 12]).isRequired
