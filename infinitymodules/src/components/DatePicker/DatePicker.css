@@ -9,6 +9,16 @@
     color: white;
 }
 
+.row {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.lastline {
+    padding-right: 40px;
+}
+
 .btnDWN {
     cursor: pointer;
     padding: 0;
@@ -21,6 +31,7 @@
     color: inherit;
     background-color: transparent;
     background-repeat:no-repeat;
+    outline: none;
 }
 
 .btnUP {
@@ -29,10 +40,12 @@
 }
 
 .btns {
+
     display: flex;
     flex-direction:column;
     justify-content: center;
-    padding-left: 14px;
+    padding-left: 20px;
+    padding-right: 10px;
 }
 
 .yearBtn {

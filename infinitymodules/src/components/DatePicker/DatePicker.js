@@ -43,22 +43,30 @@ class DatePicker extends React.Component {
         return (
             <div className={css.container}>
                 <h2>Today is {d.toLocaleString(this.props.locale)} </h2>
-                <h3>Set the year to {this.state.year}</h3>
-                <div className={css.yearBtn}>
-                    <button className={css.btnUP} onClick={() => this.setState({year: this.state.year + 1})}></button>
-                    <button className={css.btnDWN} onClick={() => this.setState({year: this.state.year - 1})}></button>
+                <div className={css.row}>
+                    <h3>Set the year to {this.state.year}</h3>
+                    <div className={css.yearBtn}>
+                        <button className={css.btnUP} onClick={() => this.setState({year: this.state.year + 1})}></button>
+                        <button className={css.btnDWN} onClick={() => this.setState({year: this.state.year - 1})}></button>
+                    </div>
                 </div>
-                <h3>month to {months[this.state.month]}</h3>
-                <div className={css.monthBtn}>
-                    <button className={css.btnUP}  onClick={() => this.setState({month: this.state.month + 1})}></button>
-                    <button className={css.btnDWN}  onClick={() => this.setState({month: this.state.month - 1})}></button>
+                <div className={css.row}>
+                    <h3>month to {months[this.state.month]}</h3>
+                    <div className={css.monthBtn}>
+                        <button className={css.btnUP}  onClick={() => this.setState({month: this.state.month + 1})}></button>
+                        <button className={css.btnDWN}  onClick={() => this.setState({month: this.state.month - 1})}></button>
+                    </div>
                 </div>
-                <h3>and the day to {this.state.day}</h3>
-                <div className={css.dayBtn}>
-                    <button className={css.btnUP}  onClick={() => this.setState({day: this.state.day + 1, weekday:this.state.weekday + 1})}></button>
-                    <button className={css.btnDWN}  onClick={() => this.setState({day: this.state.day - 1, weekday:this.state.weekday - 1})}></button>
+                <div className={css.row}>
+                    <h3>and the day to {this.state.day}</h3>
+                    <div className={css.dayBtn}>
+                        <button className={css.btnUP}  onClick={() => this.setState({day: this.state.day + 1, weekday:this.state.weekday + 1})}></button>
+                        <button className={css.btnDWN}  onClick={() => this.setState({day: this.state.day - 1, weekday:this.state.weekday - 1})}></button>
+                    </div>
                 </div>
-                <h3> which is {days[this.state.weekday]}</h3>
+                <div className={css.row}>
+                    <h3 className={css.lastline}>which is {days[this.state.weekday]}</h3>
+                </div>
             </div>
         );
 
