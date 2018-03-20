@@ -12,18 +12,20 @@ class DatePicker extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            year: date.getFullYear(),
-            month: date.getMonth(),
-            day: date.getDay()
+            year: 0,
+            month: 0,
+            day: 0,
+            weekday: 0
         }
     }
 
-    getDays() {
-
+    componentDidMount() {
+        this.setState({year: date.getFullYear(), month:date.getMonth(), day:date.getDate() , weekday:date.getDay() });
     }
 
     render() {
-        const getAllDays = this.getDays();
+
+
         // https://www.w3schools.com/js/tryit.asp?filename=tryjs_date_weekday
 
         var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -35,25 +37,18 @@ class DatePicker extends React.Component {
 
         console.log("The current month is " + months[d.getMonth()]);
         console.log('today is: ' + days[d.getDay()]);
-        console.log('todays date is: ' + d.toUTCString());
-        console.log('todays date is: ' + d.toDateString());
-        console.log(d.getDate());
-        // var d = new Date(99,5,24);
-        console.log(d.toDateString());
 
-        console.log(d.toLocaleString(this.props.locale));
 
         return (
             <div >
                 <h2>Today is {d.toLocaleString(this.props.locale)} </h2>
-                <button>+</button>
-                <button>-</button>
-                <button>+</button>
-                <button>-</button>
-                <button>+</button>
-                <button>-</button>
-
-                <button>Done</button>
+                <h3>Set year to {this.state.year}, month to {months[this.state.month]} and the day {this.state.day} which is {days[this.state.weekday]}</h3>
+                <button onClick={() => this.setState({year: this.state.year + 1})}>+</button>
+                <button onClick={() => this.setState({year: this.state.year - 1})}>-</button>
+                <button onClick={() => this.setState({month: this.state.month + 1})}>+</button>
+                <button onClick={() => this.setState({month: this.state.month - 1})}>-</button>
+                <button onClick={() => this.setState({day: this.state.day + 1, weekday:this.state.weekday + 1})}>+</button>
+                <button onClick={() => this.setState({day: this.state.day - 1, weekday:this.state.weekday - 1})}>-</button>
             </div>
         );
 
