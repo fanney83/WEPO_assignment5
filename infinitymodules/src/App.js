@@ -70,7 +70,7 @@ class App extends Component {
 
             <Tabs
                 theme="light"
-                layout="horizontal"
+                layout="vertical"
                 onSelect={newTab => this.setState({ tab: newTab })}
                 currentSelectedTab={this.state.tab}>
                 <Tab selectionKey={1} title="Tab 1">
@@ -81,6 +81,7 @@ class App extends Component {
                 </Tab>
                 <Tab selectionKey={3} title="Tab 3">
                     Content 3
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate nisi, explicabo error itaque. Veniam maxime tempore iure laborum nobis, debitis quos impedit odio incidunt! Facere sint ipsam perspiciatis quibusdam incidunt!
                 </Tab>
             </Tabs>
 
